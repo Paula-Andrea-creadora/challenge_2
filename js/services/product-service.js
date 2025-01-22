@@ -1,4 +1,4 @@
-const BASE_URL = "https://678f8c1049875e5a1a925936.mockapi.io/products";
+ const BASE_URL = "https://678f8c1049875e5a1a925936.mockapi.io/products";
 
 
 const productList =async () => {
@@ -12,7 +12,7 @@ const productList =async () => {
     }
 }
 
-/*crear producto*/ 
+/*crear producto*/
 
 const createProduct = async (name, price, image) => {
     try {
@@ -33,10 +33,13 @@ const createProduct = async (name, price, image) => {
         console.log("Error al crear productos", error)
 
     }
-    console.log();
+    
+   
+   
+   
     return data;
-    console.log();
-}
+    
+} 
 
 
 
