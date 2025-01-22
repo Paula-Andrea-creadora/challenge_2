@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Jardin_en_casa</title>
+    <link rel="shortcut icon" href="./assets/icono.png">
+  
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+    <header class="header">
+        <h1 class="titulo">El Jardin en Casa</h1>
+    </header>
+    <main class="main">
+    <section class="section">
+        <div class="productos">
+            <h2 class="producto">Mis productos</h2>
+        </div>
+       <div data-product class="productos">
+            <!--  <figure class="imagen_producto">
+                <img data-image class="imagen_preview" src="https://scontent.fcor2-2.fna.fbcdn.net/v/t39.30808-6/472208096_1117319613513814_7513532950726367034_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=QW_ohRKyFG8Q7kNvgERpES9&_nc_oc=AdipENOZU5fT1_c2fpb7gZvGIzUPqIRij3kaCLf_qmgZpF5nYAUTKEh9fVYwMTixluI&_nc_zt=23&_nc_ht=scontent.fcor2-2.fna&_nc_gid=A46rkYLEmkDE2qjUlpF06MA&oh=00_AYAqGBQwZwpoEV2vyMU3Zxn4MHd9R9mDlG9JoIgq1h_AZA&oe=67954E7A" alt="" id="imagePreview">
+                <div class="caracteristicas_producto">
+                    <p data-name class="nombre_producto">hola</p>
+                    <p data-price class="precio_producto">$adios</p>
+                    <button class="eliminar_producto" data-id="${id}">
+                        <img class="eliminar_icon" src="./assets/icono_eliminar.png" alt="Eliminar producto">
+                    </button>
+                </div>
+            </figure> -->
+        </div>   
+
+    </section>
+    <section class="section">
+        <div class="formulario">
+            <h2 class="titulo_formulario">Agregar producto:</h2>
+            <form  class="formulario_producto" data-form>
+                <input data-name type="text" placeholder="Nombre" class="producto_ingreso" id="product-name">
+                <input data-price type="text" placeholder="Precio" class="producto_ingreso" id="producto-price">
+                <input data-image type="text" placeholder="Imagen" class="producto_ingreso" id="producto-image">
+                <span data-mensaje class="mensaje_error"></span>
+            </form>
+            <!-- <textarea name="" id="" class="formulario_producto" placeholder="Nombre"></textarea>
+            <textarea name="" id="" class="formulario_producto" placeholder="Precio"></textarea>
+            <textarea name="" id="" class="formulario_producto" placeholder="Imagen"></textarea> -->
+            <div class="botones_general">
+                <button type="submit" class="enviar">Enviar</button>
+                <button type="reset" class="limpiar">Limpiar</button>
+            </div>
+        </div>
+
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer">Desarrollado por Andrea Castrillo</p>
+    </footer>
+
+    <script type="module" src="./js/controllers/main.js"></script>
+    
+</body>
+</html>

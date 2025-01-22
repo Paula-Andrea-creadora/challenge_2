@@ -1,0 +1,649 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/*Fuente */
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,700&family=Arizonia&family=Cedarville+Cursive&display=swap');
+
+/* Declaracion de variables */
+
+:root{
+    --letra-titulo: "Arizonia", serif;
+    --letra-subtitulo: "Arimo", serif;
+
+    --color-primario: #E7D283;
+    --color-secundario:#EB5A3C;
+}
+
+.body{
+    width: 100%;
+    height: 100%;
+    padding: 0% 0% 0% 0%;  
+    background-image: url('./assets/fondo_horizontal.png' );
+    background-size: 100% 100%; /* Ajusta la imagen al 100% de la altura y el ancho de la ventana */
+    background-position: center;
+    background-repeat: no-repeat; /* para que la imagen se ajuste a la pantalla*/
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo{
+    padding: 1rem;
+    font-family: var(--letra-titulo);
+    font-style:  italic;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.main{
+    display: flex; /* Activa Flexbox */
+    flex-direction: row; /* Los elementos se alinean en una fila */
+    justify-content: space-between; /* Espacio uniforme entre las columnas */
+    align-items: flex-start; /* Alinea las columnas al inicio del eje vertical */
+    padding: 1rem 3rem 0rem 3rem; /* Espaciado adecuado para que el contenido no quede pegado al borde */
+    
+}
+
+/*cambiar en los demas */
+.section{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    
+}
+
+
+
+/* Imagen dentro de los productos */
+.imagen_preview {
+    max-height: 40rem; /* Limita la altura máxima */
+    max-width: 40rem; /* Limita el ancho máximo */
+    object-fit: cover; /* Asegura que la imagen no se deforme y ocupe el contenedor adecuadamente */
+    margin-top: -4rem;
+    border: none;
+    mix-blend-mode: multiply;
+}
+
+
+.caracteristicas_producto{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: -8rem;
+   
+    
+}
+
+.precio_producto ,.nombre_producto{
+    background-color: rgba(255, 255, 255, 0.75); /* Blanco semi-transparente */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family: var(--letra-subtitulo); /* Usa la variable o un valor de respaldo */
+    font-size: 1.2rem; /* Tamaño del texto */
+    font-weight: bold; /* Cambia font-style a font-weight para negrita */
+    margin-bottom: 0.5rem; /* Espacio entre los elementos */
+
+}
+
+.eliminar_producto{
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: transparent;
+}
+
+.eliminar_icon{
+    height: 1.8rem;
+    width: 1.5rem;
+    margin-bottom: 0.2rem;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+
+.eliminar_producto:hover{
+    height: 2.1rem;
+    width: 2.1rem;
+    border: none;
+    border-radius: 0.35rem;
+}
+
+.eliminar_icon:hover{
+    height: 2rem;
+    width: 2rem;
+    margin-bottom: 0.25rem;
+    border: none;
+    border-radius: 0.35rem;
+}
+
+
+
+
+/* hasta aca*/ 
+
+
+
+/*titulo mis productos */
+.producto, .titulo_formulario {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family: var(--letra-subtitulo); /* Usa la variable o un valor de respaldo */
+    font-size: 1.5rem; /* Tamaño del texto */
+    font-weight: bold; /* Cambia font-style a font-weight para negrita */
+    margin-bottom: 0.5rem; /* Espacio entre los elementos */
+    font-style: normal;
+}
+
+
+.productos{
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Los elementos se alinean en una fila */
+    justify-content: center; /* Espacio uniforme entre las columnas */
+    align-items: flex-start; /* Alinea las columnas al inicio del eje vertical */
+    align-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    gap:2.5rem;
+    
+
+}
+
+.formulario{
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Los elementos se alinean en una fila */
+    justify-content: flex-end; /* Espacio uniforme entre las columnas */
+    align-items: flex-start; /* Alinea las columnas al inicio del eje vertical */
+    align-content: space-between;
+    margin-left: 8rem;
+    gap:1rem;
+
+}
+
+
+
+.producto_ingreso{
+    
+    font-family: var(--letra-subtitulo); /* Usa la variable o un valor de respaldo */
+    font-size: 1.2rem; /* Tamaño del texto */
+    font-style: normal;
+    border-radius: 0.5rem;
+    width: 35rem;
+    height: 3.5rem;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.75); /* Blanco semi-transparente */
+}
+
+.producto_ingreso{
+    margin-bottom: 3rem;
+    
+}
+
+
+
+.botones_general{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: flex-end;
+    gap:28rem;
+    margin-top: 5rem;
+}
+
+.enviar, .limpiar{
+    height: 2rem;
+    font-family: var(--letra-subtitulo); /* Usa la variable o un valor de respaldo */
+    background-color: var(--color-primario);
+    border: none;
+    border-radius: 0.3rem;
+    cursor:pointer;
+}
+
+.enviar:hover{
+    height: 2.5rem;
+    font-family: var(--letra-subtitulo); /* Usa la variable o un valor de respaldo */
+    font-size: 1.5rem; /* Tamaño del texto */
+    color: white;
+    background-color: var(--color-secundario);
+    border: none;
+    border-radius: 0.6rem;
+    cursor:pointer;
+}
+
+.limpiar:hover{
+    height: 2.5rem;
+    font-family: var(--letra-subtitulo); /* Usa la variable o un valor de respaldo */
+    font-size: 1.5rem; /* Tamaño del texto */
+   
+    color: white;
+    background-color: var(--color-secundario);
+    border: none;
+    border-radius: 0.6rem;
+    cursor:pointer;
+}
+/* cambiar en los demas*/
+.footer{
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height:max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:-0.5rem;
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: bold; /* Cambia font-style a font-weight para negrita */
+    position: absolute;
+    background-color: #9ba46e;
+    padding: 1rem;
+}
+
+/* Visualizaciones de la card*/
+
+
+
+
+
+
+
+
+
+
+/* Visualizaciones*/
+/* tablet 800px */
+
+@media (max-width:800px){
+    
+    .body{
+        width: 100%;
+        height: 100%;
+        padding: 0% 0% 0% 0%;  
+        background-image: url('./assets/fondo_horizontal.png' );
+        background-size: 100% 100%; /* Ajusta la imagen al 100% de la altura y el ancho de la ventana */
+        background-position: center;
+        background-repeat: no-repeat; /* para que la imagen se ajuste a la pantalla*/
+    }
+
+    .titulo{
+        padding: 0.5rem;
+        font-family: var(--letra-titulo);
+        font-style:  italic;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .main{
+        padding: 0.5rem  1.5rem 0rem 1.5rem; /* Espaciado adecuado para que el contenido no quede pegado al borde */ 
+        gap:2rem;  
+    }  
+
+
+    .imagen_preview {
+        max-height: 23rem; /* Limita la altura máxima */
+        max-width: 23rem; /* Limita el ancho máximo */
+        object-fit: cover; /* Asegura que la imagen no se deforme y ocupe el contenedor adecuadamente */
+        margin-top: -2rem;
+        
+    }
+
+    .caracteristicas_producto{
+   
+        margin-top: -4rem;
+        
+        
+    }
+
+
+    .precio_producto ,.nombre_producto{
+        
+        font-size: 0.8rem; /* Tamaño del texto */
+        
+        margin-bottom: 0.9rem; /* Espacio entre los elementos */
+    
+    }
+    
+    .eliminar_producto{
+        height: 1rem;
+        width: 1rem;
+        border: none;
+        border-radius: 0.15rem;
+    }
+    
+    .eliminar_icon{
+        height: 0.9rem;
+        width: 0.75rem;
+        margin-bottom: 0.1rem;
+        border: none;
+        border-radius: 0.15rem;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .producto, .titulo_formulario {
+        
+        font-size: 1rem; /* Tamaño del texto */
+        font-weight: bold; /* Cambia font-style a font-weight para negrita */
+        margin-bottom: 0.25rem; /* Espacio entre los elementos */
+        
+    }
+
+    .productos{
+        gap:0.05rem;
+      
+    
+    }
+
+    .formulario{
+        margin-left: -2rem;
+        gap: 1rem; /* Espacio entre los elementos del formulario */
+        
+    }
+    .producto_ingreso{
+        
+        font-size: 0.6rem; /* Tamaño del texto */
+        font-style: normal;
+        border-radius: 0.25rem;
+        width: 15rem;
+        height: 1.7rem;
+        margin-bottom: 1.5rem;
+        
+    }
+
+   
+
+    .botones_general{
+       
+        gap:10rem;
+        margin-top: 2.5rem;
+    }
+
+    .enviar, .limpiar{
+        height: 1rem;
+    
+        border-radius: 0.15rem;
+       
+    }
+
+    .enviar:hover{
+        height: 1.4rem;
+        font-size: 1.3rem; /* Tamaño del texto */
+        border-radius: 0.3rem;
+       
+    }
+
+    .limpiar:hover{
+        height: 1.4rem;
+        font-size: 1.3rem; /* Tamaño del texto */
+        border-radius: 0.3rem;
+       
+    }
+
+    .footer{
+        margin-inline-end: 1rem;
+        font-size: 0.5rem; /* Tamaño del texto */
+        position: fixed;
+  
+    }
+
+}
+
+
+/* Visualizaciones*/
+/* tablet 450px */
+
+@media (max-width:450px){
+    
+    .body{
+        width: 100%;
+        height: 100%;
+        padding: 0% 0% 0% 0%;  
+        background-image: url('./assets/fondo_vertical_B.png' );
+        background-size: 100% 100%; /* Ajusta la imagen al 100% de la altura y el ancho de la ventana */
+        background-position: center;
+        background-repeat: no-repeat; /* para que la imagen se ajuste a la pantalla*/
+    }
+
+    .titulo{
+        padding: 0.25rem;
+        font-family: var(--letra-titulo);
+        font-style:  italic;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    .main{
+        display: flex; /* Activa Flexbox */
+        flex-direction: wrap; /* Los elementos se alinean en una fila */
+        flex-flow: column-reverse;
+        justify-content: center; /* Espacio uniforme entre las columnas */
+        align-items: flex-start; /* Alinea las columnas al inicio del eje vertical */
+        padding: 0.25rem 1rem 0rem 1rem; /* Espaciado adecuado para que el contenido no quede pegado al borde */
+        
+        
+    }
+
+    .section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;    
+    }
+
+    .imagen_preview {
+        max-height: 15rem; /* Limita la altura máxima */
+        max-width: 15em; /* Limita el ancho máximo */
+        object-fit: cover; /* Asegura que la imagen no se deforme y ocupe el contenedor adecuadamente */
+        margin-top: -12rem;
+        
+    }
+
+    .caracteristicas_producto{
+   
+        margin-top: -1rem;
+        
+        
+    }
+
+    .precio_producto ,.nombre_producto{
+        
+        font-size: 0.4rem; /* Tamaño del texto */
+        
+        margin-bottom: 0.45rem; /* Espacio entre los elementos */
+    
+    }
+    
+    .eliminar_producto{
+        height: 0.5rem;
+        width: 0.5rem;
+        border: none;
+        border-radius: 0.1rem;
+    }
+    
+    .eliminar_icon{
+        height: 0.45rem;
+        width: 0.40rem;
+        margin-bottom: 0.5rem;
+        border: none;
+        border-radius: 0.05rem;
+    }
+
+
+
+
+
+
+
+
+
+
+    .productos {
+        display: flex;             /* Activa Flexbox */
+        flex-wrap: wrap;           /* Permite que los elementos se ajusten a nuevas filas */
+        flex-direction: row;       /* Organiza los elementos en filas */
+        justify-content: flex-start; /* Alinea los elementos al principio de la fila */
+        align-items: flex-start;   /* Alinea los elementos al inicio del eje vertical */
+        gap: 10rem;                 /* Espacio uniforme entre los elementos */
+        margin-top: 2rem;          /* Espacio superior */
+        margin-bottom: 2rem;       /* Espacio inferior */
+        box-sizing: border-box;    /* Asegura que el padding y el borde no afecten el tamaño total */
+    }
+    
+
+    /*titulo mis productos */
+
+
+    .producto {
+        text-align:center; /* Centra el texto horizontalmente */
+        font-family: var(--letra-subtitulo); /* Usa la variable o un valor de respaldo */
+        font-size: 0.5rem; /* Tamaño del texto */
+        font-weight: bold; /* Cambia font-style a font-weight para negrita */
+        margin-bottom: 0.15rem; /* Espacio entre los elementos */
+        margin-top: -5rem;
+        margin-bottom: 0.15rem; /* Espacio entre los elementos */
+        font-style: normal;
+    }
+
+
+
+
+    .formulario{
+        display: flex; /* Activa Flexbox */
+        flex-direction: column; /* Apila los elementos verticalmente */
+        flex-wrap: nowrap;
+        justify-content: flex-start; /* Alinea los elementos al inicio del eje principal */
+        align-items: flex-start; /* Alinea los elementos al inicio del eje cruzado */
+        gap: 0.25rem; /* Espacio uniforme entre los elementos */
+        margin-top: 0.5rem; /* Ajusta el espacio superior si es necesario */
+        margin-left: 1rem; 
+    }
+
+
+    .formulario_conteiner{
+        display: flex; /* Activa Flexbox */
+        flex-direction: column; /* Apila los elementos verticalmente */
+        justify-content: flex-end; /* Alinea los elementos al inicio del eje principal */
+        align-items: flex-end; /* Alinea los elementos al inicio del eje cruzado */
+        gap: 0.25rem; /* Espacio uniforme entre los elementos */
+        margin-top: 0.5rem; /* Ajusta el espacio superior si es necesario */
+        margin-left: -0.12rem;
+    }
+
+
+    /* .formulario_conteiner{
+        display: flex; /* Activa Flexbox */
+       /* flex-direction: column;  Apila los elementos verticalmente */
+        /*justify-content: flex-end;  Alinea los elementos al inicio del eje principal */
+        /* align-items: flex-end; Alinea los elementos al inicio del eje cruzado */
+       /* gap: 0.25rem;  Espacio uniforme entre los elementos */
+        /*margin-top: 0.5rem;  Ajusta el espacio superior si es necesario */
+        /*margin-left: -0.12rem;
+    }
+    */
+
+
+
+
+
+
+
+    .producto_ingreso{
+        font-family: var(--letra-subtitulo); /* Usa la variable o un valor de respaldo */
+        font-size: 0.6rem; /* Tamaño del texto */
+        font-style: normal;
+        border-radius: 0.15rem;
+        width: 10rem;
+        height: 1.5rem;
+        outline: none;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.75); /* Blanco semi-transparente */
+        margin-bottom: 0.5rem;
+    }
+
+   
+
+    .botones_general{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap:6rem;
+        margin-top: 1.5rem;
+    }
+
+    .enviar, .limpiar{
+        height: 0.5rem;
+        font-size: 0.5rem; /* Tamaño del texto */
+    
+        border-radius: 0.05rem;
+       
+    }
+    
+    .enviar:hover{
+        height:0.6rem;
+        font-size: 0.5rem; /* Tamaño del texto */
+        border-radius: 0.1rem;
+       
+    }
+
+    .limpiar:hover{
+        height: 0.6rem;
+        font-size: 0.5rem; /* Tamaño del texto */
+        border-radius: 0.1rem;
+       
+    }
+
+    .footer{
+        margin-inline-end: 1rem;
+        font-size: 0.5rem; /* Tamaño del texto */
+        margin-top: -0.5rem;
+        position: fixed;
+  
+    }
+
+
+
+
+  
+
+}
+
+
+
+
+
+
+

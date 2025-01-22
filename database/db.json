@@ -1,0 +1,16 @@
+{
+    "products":[
+    {
+      "name":"Cactus de coral",
+      "price":"100",
+      "image": "https://scontent.fcor2-2.fna.fbcdn.net/v/t39.30808-6/472208096_1117319613513814_7513532950726367034_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=QW_ohRKyFG8Q7kNvgERpES9&_nc_oc=AdipENOZU5fT1_c2fpb7gZvGIzUPqIRij3kaCLf_qmgZpF5nYAUTKEh9fVYwMTixluI&_nc_zt=23&_nc_ht=scontent.fcor2-2.fna&_nc_gid=A46rkYLEmkDE2qjUlpF06MA&oh=00_AYAqGBQwZwpoEV2vyMU3Zxn4MHd9R9mDlG9JoIgq1h_AZA&oe=67954E7A",
+      "id":"1"
+    },
+    {
+        "name":"Dracaena",
+        "price":"200",
+        "image":"https://scontent.fcor2-1.fna.fbcdn.net/v/t39.30808-6/472441706_1117319660180476_4370574007272680661_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=xbGq7SuoR2oQ7kNvgFgrjzB&_nc_oc=Adh19MgMSMesmahkFOWHKAJFe2nuIt0zcEJdrXBiLFdzD4_ApQpMgH_pgz5nDBsVraI&_nc_zt=23&_nc_ht=scontent.fcor2-1.fna&_nc_gid=ARK4O-WQUlh8akAs8xm379m&oh=00_AYBQ6YibgmwqeSihF7Vb43fyccZg3ftxgVyGra5MUDoPZg&oe=67955250",
+        "id":"2"
+    }
+    ]
+}
