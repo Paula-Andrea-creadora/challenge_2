@@ -1,71 +1,3 @@
-/* import { servicesProducts } from "../services/product-service.js";
-
-const productContainers = document.querySelector("[data-product]");
-
-const form = document.querySelector("[data-form]");
-
-function createCard({name,price,image,id}){
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.innerHTML = `
-        <div data-product class="productos">
-            <figure class="imagen_producto">
-                <img data-image class="imagen_preview" src="${image}" alt="imagen producto">
-                <div class="caracteristicas_producto">
-                    <p data-name class="nombre_producto">${name}</p>
-                    <p data-price class="precio_producto">${price}</p>
-                    <button class="eliminar_producto" data-id="${id}">
-                        <img class="eliminar_icon" src="./assets/icono_eliminar.png" alt="Eliminar producto">
-                    </button>
-                </div>
-            </figure>
-        </div>
-    
-    `;
-
-    return card;
-
-}
-
-const renderProducts = async() => {
-    try{
-        const listProducts = await servicesProducts.productList();
-        listProducts.forEach(product => {
-            const productCard =createCard(product);
-            productContainers.appendChild(productCard);
-            
-        });
-
-    } catch (error){
-        console.log(error);
-    }
-}
-
-form.addEventListener("submit" , async (event) => {
-    event.preventDefault();
-
-    const name = document.querySelector("[data-name]").value;
-    const price = document.querySelector("[data-price]").value;
-    const image= document.querySelector("[data-image]").value;
-
-    /* console.log(name);
-    console.log(price);
-    console.log(image); 
-    try{
-        const newProduct = await servicesProducts.createProduct(name, price, image);
-        const newCard =createCard(newProduct);
-        productContainers.appendChild(newCard);
-
-    }catch (error){
-        console.log(error)
-    }
-
-    form.reset();
-
-})
-
-renderProducts(); */
-
 import { servicesProducts } from "../services/product-service.js";
 
 const productContainers = document.querySelector("[data-product]");
@@ -82,7 +14,7 @@ function createCard({ name, price, image, id }) {
                 <div class="caracteristicas_producto">
                     <p data-name class="nombre_producto">${name}</p>
                     <p data-price class="precio_producto">${price}</p>
-                    <button class="eliminar_producto" data-id="${id}">
+                    <button class="eliminar_producto" onclick="btnEliminar()"  data-id="${id}">
                         <img class="eliminar_icon" src="./assets/icono_eliminar.png" alt="Eliminar producto">
                     </button>
                 </div>
@@ -103,6 +35,7 @@ function createCard({ name, price, image, id }) {
     });
 
     return card;
+    
 }
 
 // Función para renderizar productos en el contenedor
@@ -141,7 +74,7 @@ form.addEventListener("submit", async (event) => {
         const newCard = createCard(newProduct);
         productContainers.appendChild(newCard);
 
-        console.log();
+       
 
         // Limpiar el formulario después de enviar
         form.reset();
@@ -149,21 +82,43 @@ form.addEventListener("submit", async (event) => {
         // Recargar la lista de productos (esto asegura que los productos estén actualizados)
         renderProducts();
 
-        console.log();
+        
 
     } catch (error) {
         console.log("Error al agregar el producto:", error);
     }
 
-    console.log();
+    
     return;
-    console.log();
+    
 
 
 });
 
+// Función para eliminar un producto por su ID
+const deleteProduct = async (id) => {
+    try {
+        const response = await fetch(`${BASE_URL}/${id}`, {
+            method: "DELETE",
+        });
+        if (!response.ok) {
+            throw new Error("Error al eliminar el producto");
+        }
+        console.log(`Producto con ID ${id} eliminado`);
+    } catch (error) {
+        console.error("Error al intentar eliminar el producto:", error);
+    }
+
+  
+};
+
+
+
+
 // Inicializa la carga de productos al cargar la página
+
 renderProducts();
+
 
 
 
